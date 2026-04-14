@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    #image: php:8.5-apache
+    container_name: kanban-server
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+      - ./src/js:/var/www/html/js
+      - ./src/php:/var/www/html/php
+  db:
+    image: mysql:8.0
+    container_name: kanban-db
+    restart: always
+    env_file:
+      mysql.env
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+volumes:
+  db:

@@ -1,0 +1,5 @@
+/* Este selector detecta cualquier columna de Bootstrap sin romper el layout */
+
+.tasks-container{
+  min-height: 100px;
+}
