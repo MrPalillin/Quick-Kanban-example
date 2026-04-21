@@ -25,7 +25,7 @@ if ($result->num_rows > 0) {
      <div class='card-body'>
      <h5 class='card-title'> {$row['name']} </h5>
      <h6 class='card-subtitle mb-2 text-muted'>Creation date: {$row['creationDate']}</h6>
-     <a href=board.php?id={$row['id']} class='btn btn-primary stretched-link'>Go somewhere</a>
+     <a href=board.php?id={$row['id']} class='btn btn-primary stretched-link'>Open board</a>
      </div>
      </div>";
   }

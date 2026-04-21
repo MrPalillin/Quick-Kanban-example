@@ -9,10 +9,14 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 
-<?php include '../php/get_tasks.php'?>
+<?php include '../php/get_tasks.php' ?>
+
+<div class="container-fluid">
+  <button class="btn btn-primary" value="go_back" onclick="window.location.href='http://localhost:8080'">Go Back to Boards</button>
+</div>
 
 </html>
