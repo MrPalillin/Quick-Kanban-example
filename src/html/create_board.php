@@ -1,13 +1,10 @@
 <?php
-
 header('Content-Type: application/json');
 
 $aResult = array();
-
 if (!isset($_POST['functionname'])) {
     $aResult['error'] = 'No function name!';
 }
-
 if (!isset($_POST['arguments'])) {
     $aResult['error'] = 'No function arguments!';
 }
@@ -16,10 +13,10 @@ if (!isset($aResult['error'])) {
 
     switch ($_POST['functionname']) {
         case 'createBoard':
-            if (!is_array($_POST['arguments']) || (count($_POST['arguments']) < 1)) {
+            if (is_array($_POST['arguments'])) {
                 $aResult['error'] = 'Error in arguments!';
             } else {
-                $aResult = changeCard($_POST['arguments'][0], $_POST['arguments'][1], $_POST['arguments'][2]);
+                $aResult = createNewBoard($_POST['arguments']);
             }
             break;
 
@@ -32,7 +29,7 @@ if (!isset($aResult['error'])) {
 
 echo json_encode($aResult);
 
-function createBoard($board_name)
+function createNewBoard($board_name)
 {
 
     $result = "";
@@ -49,13 +46,12 @@ function createBoard($board_name)
         die("Connection failed: " . $conn->connect_error);
     }
 
-    $sql = "INSERT INTO boards WHERE name=" . $board_name . ";";
+    //$sql = "INSERT INTO boards WHERE name=" . $board_name . ";";
+    $sql = "INSERT INTO boards (name) VALUES ('".$board_name."');";
     // Execute the SQL query
-//$result = $conn->query($sql);
+    $result = $conn->query($sql);
 
-    $result = $sql;
-
-    echo $result;
+    return $result;
 
 }
 

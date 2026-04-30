@@ -9,6 +9,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
@@ -35,25 +36,7 @@
       </div>
     </div>
   </div>
-  <script>
-    function openModal() {
-      fetch('create_board_modal.php')
-        .then(response => response.text())
-        .then(html => {
-          document.getElementById('modal-container').innerHTML = html;
-
-          // Now show it (depends on your modal system)
-          document.getElementById('myModal').style.display = 'block';
-        })
-        .catch(err => console.error(err));
-    }
-
-    document.addEventListener('click', function (e) {
-      if (e.target.classList.contains('btn-close') || e.target.id == "btn-close") {
-        document.getElementById('myModal').style.display = 'none';
-      }
-    });
-  </script>
+  <script type='text/javascript' src='js/manage_main_page.js'></script>
 </body>
 
 </html>
