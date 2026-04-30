@@ -31,9 +31,7 @@
       </div>
     </div>
     <div class="row p-2">
-      <div class="col p-2">
         <?php include("../php/get_boards.php"); ?>
-      </div>
     </div>
   </div>
   <script type='text/javascript' src='js/manage_main_page.js'></script>

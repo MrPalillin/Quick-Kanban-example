@@ -21,6 +21,7 @@ $table .= getRowTasks('cancelled', $board_id);
 $table .= "</div>
   </main>
   <script type='text/javascript' src='../js/move_element.js'></script>
+  <script type='text/javascript' src='../js/create_task.js'></script>
 </body>";
 
 echo $table;

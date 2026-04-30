@@ -8,13 +8,15 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Create new board</h5>
+                <h5 class="modal-title">Create new task</h5>
                 <button type="button" class="btn-close" aria-label="Close" data-bs-dismiss="modal"></button>
             </div>
             <form onsubmit="createBoard(event)">
                 <div class="modal-body">
-                    <label for="board_name">Board name</label>
-                    <input type="text" class="form-control" id="board_name" placeholder="Insert name here" required>
+                    <label for="board_name">Task name</label>
+                    <input type="text" class="form-control" id="task_name" placeholder="Insert name here" required>
+                    <label for="board_name">Task description</label>
+                    <textarea type="text" class="form-control" id="task_name" placeholder="Insert name here" required></textarea>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Save changes</button>

@@ -14,9 +14,11 @@
 </head>
 
 <?php include '../php/get_tasks.php' ?>
-
+<div id="modal-container"></div>
 <div class="container-fluid">
   <button class="btn btn-primary" value="go_back" onclick="window.location.href='http://localhost:8080'">Go Back to Boards</button>
+  <button class="btn btn-primary" value="new_task" onclick="openNewTaskModal()">Create new Task</button>
+  <script type='text/javascript' src='js/manage_main_page.js'></script>
 </div>
 
 </html>
